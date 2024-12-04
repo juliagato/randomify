@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Randomify",
+  "name": "Randomify - Spotify Asset Randomizer",
   "icons": [
     {
       "src": "favicon.ico",

@@ -1,0 +1,369 @@
+#root {
+	width: 100vw;
+	height: 100vh;
+	overflow: hidden;
+}
+
+:root {
+	--accent: #202020;
+}
+
+.random-spa-container {
+	width: 100%;
+	height: 100%;
+	container-sizing: border-container;
+	background-color: #202020;
+	background: linear-gradient(0deg, var(--accent) 0%, rgba(0, 0, 0, 1) 100%);
+
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	overflow-y: scroll;
+}
+
+.random-spa-title {
+	font-family: "Kumbh Sans", serif;
+	font-size: 155px;
+	color: #fff;
+}
+
+.random-spa-minititle {
+	font-family: "Kumbh Sans", serif;
+	font-size: 50px;
+	color: #fff;
+	position: absolute;
+	left: 25px;
+}
+
+.random-spa-header {
+	min-width: 820px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.random-spa-icon {
+	width: 300px;
+	height: 300px;
+	border-radius: 100%;
+	border: 5px solid var(--accent);
+	/* container-shadow: ; */
+}
+
+.random-spa-body {
+	padding: 50px 120px;
+}
+
+.random-spa-loading {
+	min-height: 150px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 15px;
+	margin: 30px 0 0;
+}
+
+.random-spa-loading-icon {
+	font-size: 80px;
+	color: #fff;
+	font-weight: 600;
+	-webkit-animation: loading 1.3s linear infinite;
+	-moz-animation: loading 1.3s linear infinite;
+	-ms-animation: loading 1.3s linear infinite;
+	-o-animation: loading 1.3s linear infinite;
+	animation: loading 1.3s linear infinite;
+}
+
+@-webkit-keyframes loading
+
+/* Safari and Chrome */
+	{
+	from {
+		-webkit-transform: rotate(0deg);
+		-o-transform: rotate(0deg);
+		transform: rotate(0deg);
+	}
+
+	to {
+		-webkit-transform: rotate(360deg);
+		-o-transform: rotate(360deg);
+		transform: rotate(360deg);
+	}
+}
+
+@keyframes loading {
+	from {
+		-ms-transform: rotate(0deg);
+		-moz-transform: rotate(0deg);
+		-webkit-transform: rotate(0deg);
+		-o-transform: rotate(0deg);
+		transform: rotate(0deg);
+	}
+
+	to {
+		-ms-transform: rotate(360deg);
+		-moz-transform: rotate(360deg);
+		-webkit-transform: rotate(360deg);
+		-o-transform: rotate(360deg);
+		transform: rotate(360deg);
+	}
+}
+
+.random-spa-loading-text {
+	font-family: "Kumbh Sans", serif;
+	font-size: 30px;
+	font-weight: bold;
+	color: #fff;
+	letter-spacing: 10px;
+}
+
+.random-spa-input {
+	width: 100%;
+	padding: 20px 35px;
+	border-radius: 50px;
+	background-color: #303030;
+	border: none;
+
+	font-family: 'Kumbh Sans';
+	font-size: 30px;
+	letter-spacing: 2px;
+	color: #fff;
+}
+
+.random-spa-input::placeholder {
+	color: #fff;
+	opacity: 0.6;
+}
+
+input:focus {
+	outline: none;
+}
+
+.input-container {
+	width: 100%;
+	margin: 20px 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.input-control {
+	width: 100%;
+	display: flex;
+	position: relative;
+}
+
+.input-control-clear {
+	font-size: 35px;
+	color: #fff;
+	line-height: 0.6;
+
+	position: absolute;
+	top: calc(50% - 10px);
+	right: 25px;
+	cursor: pointer;
+	user-select: none;
+}
+
+.input-control-search {
+	font-size: 50px;
+	font-weight: bold;
+	color: #fff;
+	line-height: 0.6;
+	margin: 0 0 0 20px;
+	cursor: pointer;
+	user-select: none;
+}
+
+.random-spa-result-recents {
+	width: 55%;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+
+	font-family: 'Kumbh Sans';
+	color: #fff;
+	font-size: 20px;
+	gap: 15px;
+}
+
+.random-spa-artists-container {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
+	gap: 15px;
+}
+
+.random-spa-artist-best-result {
+	border: 3px solid #0cc205;
+}
+
+.random-spa-artist-container {
+	display: flex;
+	align-items: center;
+	gap: 20px;
+	padding: 20px;
+	border-radius: 20px;
+	background-color: #202020;
+	background: linear-gradient(150deg, #202020 70%, #cecece 500%);
+	cursor: pointer;
+}
+
+.random-spa-artist-container:hover {
+	background: linear-gradient(150deg, #303030 70%, #cecece 500%);
+}
+
+.random-spa-artist-container img {
+	width: 80px;
+	height: 80px;
+	object-fit: cover;
+	border-radius: 100%;
+}
+
+.random-spa-artist-name {
+	font-family: 'Kumbh Sans';
+	color: #fff;
+	font-size: 20px;
+	letter-spacing: 1.2px;
+}
+
+.random-spa-result-container {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 10px;
+	cursor: pointer;
+}
+
+.random-spa-result-name {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-family: 'Kumbh Sans';
+	color: #fff;
+	font-size: 18px;
+	letter-spacing: 1.2px;
+	padding: 11px 20px;
+	background-color: #303030;
+	border-radius: 50px;
+}
+
+.random-spa-result-icon {
+	width: 20px;
+	height: 22px;
+	font-size: 20px;
+	font-weight: bold;
+	margin-left: 5px;
+	user-select: none;
+}
+
+.random-spa-results {
+	width: 820px;
+	margin: 50px 0;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 5px;
+}
+
+.random-spa-results-info {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	flex: 1;
+}
+
+.random-spa-results-track {
+	font-family: 'Kumbh Sans';
+	color: #fff;
+	font-size: 50px;
+	font-weight: bold;
+	letter-spacing: 1.2px;
+}
+
+.random-spa-results-album {
+	font-family: 'Kumbh Sans';
+	color: #fff;
+	font-size: 35px;
+	letter-spacing: 1.2px;
+}
+
+.random-spa-results-artist {
+	font-family: 'Kumbh Sans';
+	color: #fff;
+	font-size: 25px;
+	letter-spacing: 1.2px;
+}
+
+.random-spa-button {
+	padding: 10px 15px;
+	background: #ffffff30;
+	border-radius: 35px;
+	margin-top: 15px;
+
+	font-family: 'Kumbh Sans';
+	color: #fff;
+	font-size: 20px;
+	letter-spacing: 1.2px;
+
+	cursor: pointer;
+}
+
+.icon {
+	font-family: 'Material Symbols Outlined';
+}
+
+
+@media screen and (max-width: 500px) {
+	.random-spa-header {
+		width: calc(100% - 40px);
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.random-spa-title {
+		font-size: 65px;
+	}
+
+	.random-spa-input {
+		padding: 15px 20px;
+		font-size: 16px;
+	}
+
+	.input-control-clear {
+		font-size: 23px;
+		top: calc(50% - 7px);
+		right: 17px;
+	}
+
+	.input-control-search {
+		font-size: 30px;
+		margin: 0 0 0 10px;
+	}
+
+	.input-container {
+		width: 95%;
+	}
+
+	.random-spa-loading-icon {
+		font-weight: 500;
+	}
+
+	.random-spa-loading-text {
+		font-size: 20px;
+	}
+
+	.random-spa-result-recents {
+		width: 85%;
+		font-size: 15px;
+	}
+
+	.random-spa-result-name {
+		font-size: 13px;
+		padding: 7px 15px;
+	}
+}
