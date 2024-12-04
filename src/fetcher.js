@@ -18,16 +18,29 @@ async function getToken() {
 
 function makeURL(params) {
 
-    const { querysearch, endpoint, type, limit } = params;
-
-    const search = querysearch.replace(' ', '+');
+    const { querysearch, endpoint, id, limit } = params;
 
     let url = `${apiURI}`;
 
     if (endpoint === 'search') {
-        url = `/search?q=${search}`;
-    } else {
-        url = `/artist/${params}/albums`
+
+        // Searches for artists according to query
+        const query = querysearch.replace(' ', '+');
+        url += `/search?q=${query}&type=artist`;
+
+    } else if (endpoint === 'albums') {
+
+        url += `/artists/${id}/albums`;
+
+    } else if (endpoint === 'tracks') {
+
+        url += `/albums/${id}/tracks`;
+
+    }
+
+    // Change limit if any
+    if ('limit' in params) {
+        url += `${url.includes('?') ? '&' : '?'}limit=${limit}`;
     }
 
     return url;
@@ -51,13 +64,13 @@ async function Fetcher(params) {
         }
     );
 
-    let data = await response.json();
+    var data = await response.json();
 
     if ('artists' in data) {
         return data.artists;
     }
 
-    return null;
+    return data;
 }
 
 export default Fetcher;

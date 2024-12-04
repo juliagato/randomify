@@ -282,6 +282,7 @@ input:focus {
 	font-size: 50px;
 	font-weight: bold;
 	letter-spacing: 1.2px;
+	text-align: center;
 }
 
 .random-spa-results-album {
@@ -289,6 +290,7 @@ input:focus {
 	color: #fff;
 	font-size: 35px;
 	letter-spacing: 1.2px;
+	text-align: center;
 }
 
 .random-spa-results-artist {
@@ -296,6 +298,7 @@ input:focus {
 	color: #fff;
 	font-size: 25px;
 	letter-spacing: 1.2px;
+	text-align: center;
 }
 
 .random-spa-button {
